@@ -1,4 +1,3 @@
-cat > README.md << 'ENDOFFILE'
 # Smart Portfolio Allocation System
 
 An ML-enhanced quantitative portfolio system that combines machine learning return prediction with Markowitz mean-variance optimization to intelligently allocate weights across a basket of equities.
