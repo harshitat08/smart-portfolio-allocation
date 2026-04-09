@@ -1,3 +1,4 @@
+cat > README.md << 'ENDOFFILE'
 # Smart Portfolio Allocation System
 
 An ML-enhanced quantitative portfolio system that combines machine learning return prediction with Markowitz mean-variance optimization to intelligently allocate weights across a basket of equities.
@@ -26,6 +27,8 @@ Smart Portfolio outperformed SPY by ~5% CAGR with a Sharpe improvement of 32% (0
 8. **Benchmarking** — Compares against equal-weight portfolio and SPY
 
 ## Project Structure
+
+\`\`\`
 ├── data.py          # Data fetching via yfinance
 ├── features.py      # Technical indicator engineering
 ├── model.py         # ML return prediction (Random Forest)
@@ -33,10 +36,11 @@ Smart Portfolio outperformed SPY by ~5% CAGR with a Sharpe improvement of 32% (0
 ├── backtest.py      # Walk-forward simulation
 ├── main.py          # CLI entry point
 └── requirements.txt
+\`\`\`
 
 ## Usage
 
-```bash
+\`\`\`bash
 pip install -r requirements.txt
 
 # Default run
@@ -46,23 +50,19 @@ python main.py
 python main.py --risk aggressive --rebalance W
 python main.py --tickers AAPL MSFT NVDA TSLA --start 2021-01-01
 python main.py --no-ml --objective minvol
-```
+\`\`\`
 
 ## CLI Options
 
 | Flag | Options | Default |
 |---|---|---|
-| `--risk` | aggressive / moderate / conservative | moderate |
-| `--model` | random_forest / ridge / lasso / gradient_boosting | random_forest |
-| `--rebalance` | W / M / Q | M |
-| `--objective` | sharpe / minvol / maxret | sharpe |
-| `--no-ml` | — | False |
+| \`--risk\` | aggressive / moderate / conservative | moderate |
+| \`--model\` | random_forest / ridge / lasso / gradient_boosting | random_forest |
+| \`--rebalance\` | W / M / Q | M |
+| \`--objective\` | sharpe / minvol / maxret | sharpe |
+| \`--no-ml\` | — | False |
 
 ## Tech Stack
 
 Python · yfinance · scikit-learn · scipy · pandas · numpy · matplotlib
-
-Push it:
-git add README.md
-git commit -m "Add README"
-git push
+ENDOFFILE
